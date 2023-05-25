@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/regstyle.css">
+</head>
+<body>
+        <div class="logo">
+            <img src="../img/Logo.png" style="width: 200px; display: block; margin-top: 5%;">
+        </div>
+        <div class="box">
+            <div class="form" method="POST">
+                <div class="textBox1">
+                    <label class="textStyle">Имя</label><br><input type="text" pattern="[А-Яа-яЁё ]+" class="InputBox" id="name" required>
+                </div>
+                <div class="textBox2">
+                    <label class="textStyle">Email</label><br><input class="InputBox" type="emal" id="email" name="mail" pattern="[a-zA-Z]{1,}[a-zA-Z0-9.-_][a-zA-Z0-9]{1,}@(mail|gmail|yahoo|yandex).(ru|com)" required>
+                </div>
+                <div class="textBox3">
+                    <label class="textStyle">Дата рождения</label><br><input class="InputBox" type="date" id="date" name="date"required>
+                </div>
+                <div class="textBox4">
+                    <label class="textStyle">Пароль</label><br><input type="password" pattern="[А-Яа-яЁё ]+" class="InputBox" id="password" required>
+                </div>
+                <div class="textBox5">
+                    <label class="textStyle">Подтверждение пароля</label><br><input type="password" pattern="[А-Яа-яЁё ]+" class="InputBox" id="repassword" required>
+                </div>
+                <div class="LinkAndButton">
+                    <a href="../pages/login.html" class="linkA">Уже зарегестрированы?</a>
+                    <button class="login">Зарегестрироваться</button>
+                </div>
+            </div>
+        </div>
+        <div class="point1"></div>
+        <div class="point2"></div>
+        <script src="../scripts/regscript.js"></script>
+</body>
+</html>

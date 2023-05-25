@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/loginstyle.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="../img/Logo.png" style="width: 200px; display: block; margin-top: 5%;">
+    </div>
+    <div class="box">
+        <div class="form">
+            <div class="textBox1">
+                <label class="textStyle">Email</label><br><input class="InputBox" type="emal" id="mail" name="mail" pattern="[a-zA-Z]{1,}[a-zA-Z0-9.-_][a-zA-Z0-9]{1,}@(mail|gmail|yahoo|yandex).(ru|com)" required>
+            </div>
+            <div class="textBox2">
+                <label class="textStyle">Пароль</label><br><input type="password" pattern="[А-Яа-яЁё ]+" class="InputBox">
+            </div>
+            <div class="LinkAndButton">
+                <a href="../pages/reg.html" class="linkA">Зарегестрироваться</a>
+                <button class="LOGIN">Войти</button>
+            </div>
+        </div>
+    </div>
+    <div class="point1"></div>
+    <div class="point2"></div>
+</body>
+</html>
