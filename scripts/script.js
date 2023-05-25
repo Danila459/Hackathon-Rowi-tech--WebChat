@@ -14,6 +14,8 @@ let listData = [{
 }]
 
 const $app = document.getElementById('app'),
+    $addForm = document.getElementById('add-form'),
+    $addNameInput = document.getElementById('add-form_name-inp'),
     $table = document.createElement('table'),
     $tableHead = document.createElement('thead'),
     $tableBody = document.createElement('tbody'),
@@ -61,6 +63,32 @@ for(const oneUser of listData){
     
     $tableBody.append($userTr)  
 }
+
+$addForm.addEventListener('submit', function(event){
+    event.preventDefault()
+
+    listData.push({
+        name: $nameInput.value
+    })
+    
+    const copyListData = [...listData]
+    for(const oneUser of copyListData){
+        oneUser.fio = oneUser.name + ' ' + oneUser.surename + ' ' + oneUser.lastname
+    }
+    
+    for(const oneUser of listData){
+        const $userTr = document.createElement('tr'),
+        $userFIO = document.createElement('th');
+        
+        $userFIO.textContent = oneUser.fio
+
+        $userTr.append($userFIO)
+        
+        $tableBody.append($userTr) 
+
+}
+})
+
 
 
 
